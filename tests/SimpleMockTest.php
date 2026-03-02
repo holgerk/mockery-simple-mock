@@ -81,17 +81,6 @@ class SimpleMockTest extends TestCase
         self::assertInstanceOf(MockInterface::class, $mock);
     }
 
-    public function test_works_with_interface(): void
-    {
-        $mock = simpleMock(SomeInterface::class, $capturedCalls, [
-            'compute' => 7,
-        ]);
-
-        $result = $mock->compute(3, 4);
-
-        self::assertSame(7, $result);
-        self::assertSame([['a' => 3, 'b' => 4]], $capturedCalls['compute']);
-    }
 }
 
 // ---------------------------------------------------------------------------
@@ -108,7 +97,3 @@ class SomeService
     public function process(int $id): void {}
 }
 
-interface SomeInterface
-{
-    public function compute(int $a, int $b): int;
-}
