@@ -12,6 +12,11 @@ jobs:
       matrix:
         php: ['8.1', '8.2', '8.3', '8.4', '8.5']
         dependency-version: ['lowest', 'highest']
+        include:
+          - dependency-version: lowest
+            composer-flag: '--prefer-lowest'
+          - dependency-version: highest
+            composer-flag: ''
 
     name: PHP ${{ matrix.php }} - ${{ matrix.dependency-version }}
 
@@ -25,7 +30,7 @@ jobs:
           coverage: none
 
       - name: Install dependencies
-        run: composer update --prefer-dist --no-progress --prefer-${{ matrix.dependency-version }}
+        run: composer update --prefer-dist --no-progress ${{ matrix.composer-flag }}
 
       - name: Run tests
         run: ./vendor/bin/phpunit
