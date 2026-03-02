@@ -1,5 +1,10 @@
 # mockery-simple-mock
 
+[![Tests](https://github.com/holgerk/mockery-simple-mock/actions/workflows/tests.yml/badge.svg)](https://github.com/holgerk/mockery-simple-mock/actions/workflows/tests.yml)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/holgerk/mockery-simple-mock.svg)](https://packagist.org/packages/holgerk/mockery-simple-mock)
+[![PHP Version](https://img.shields.io/packagist/php-v/holgerk/mockery-simple-mock.svg)](https://packagist.org/packages/holgerk/mockery-simple-mock)
+[![License](https://img.shields.io/packagist/l/holgerk/mockery-simple-mock.svg)](https://packagist.org/packages/holgerk/mockery-simple-mock)
+
 A single helper function that wraps [Mockery](https://github.com/mockery/mockery) to make mocking and call capturing straightforward.
 
 ## Installation
